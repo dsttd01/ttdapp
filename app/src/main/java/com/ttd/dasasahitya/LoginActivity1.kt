@@ -38,7 +38,7 @@ open class LoginActivity1 : AppCompatActivity(), GoogleApiClient.OnConnectionFai
             .requestEmail().build()
 
         googleSignInClient = GoogleSignIn.getClient(this, gso)
-        findViewById<Button>(R.id.button).setOnClickListener { signInGoogle() }
+//        findViewById<Button>(R.id.button).setOnClickListener { signInGoogle() }
 
 //        findViewById<Button>(R.id.normal_sign_in).setOnClickListener {
 //            val email = findViewById<EditText>(R.id.email).text.toString()

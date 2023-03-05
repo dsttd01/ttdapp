@@ -10,5 +10,9 @@
 
     <color name="login_background">#5f1701</color>
     <color name="background_login">#fff8de</color>
-    <color name="login_text">#BDB38E</color>
+    <color name="login_text">#6A570D</color>
+
+    <color name="background_home">#ffeeb2</color>
+    <color name="home_background">#fff8de</color>
+    <color name="text_home">#601702</color>
 </resources>
