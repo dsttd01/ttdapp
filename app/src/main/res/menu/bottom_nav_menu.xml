@@ -21,6 +21,6 @@
 
     <item
         android:id="@+id/profile"
-        android:icon="@drawable/notofication"
-        android:title="Profile" />
+        android:icon="@drawable/more"
+        android:title="More" />
 </menu>
