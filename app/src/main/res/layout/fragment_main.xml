@@ -25,21 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.1" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h16per"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.16" />
-
-    <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h18per"
-        android:layout_width="0dp"
-        android:layout_height="0dp"
-        android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.18" />
+        app:layout_constraintGuide_percent="0.12" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h35per"
@@ -194,6 +180,7 @@
         android:layout_height="0dp"
         android:gravity="center_horizontal"
         android:padding="@dimen/_5sdp"
+
         app:layout_constraintBottom_toTopOf="@+id/h6per"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -226,6 +213,7 @@
         app:layout_constraintTop_toTopOf="@+id/h6per" />
 
     <SearchView
+        android:visibility="gone"
         android:id="@+id/search_view"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -235,7 +223,7 @@
         android:iconifiedByDefault="false"
         android:queryHint="Search Dasa Sahitya"
         android:searchIcon="@drawable/search"
-        app:layout_constraintBottom_toTopOf="@+id/h16per"
+        app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/ttd_header" />
@@ -248,7 +236,7 @@
         app:layout_constraintBottom_toTopOf="@+id/h35per"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h18per"/>
+        app:layout_constraintTop_toTopOf="@+id/h10per" />
 
 
     <androidx.cardview.widget.CardView
@@ -389,7 +377,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@+id/h64per"
         app:layout_constraintEnd_toEndOf="parent"
@@ -441,7 +429,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@+id/h71per"
         app:layout_constraintEnd_toEndOf="parent"
@@ -496,7 +484,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@+id/h78per"
         app:layout_constraintEnd_toEndOf="parent"
@@ -551,7 +539,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
-        app:cardCornerRadius="@dimen/_15sdp"
+        app:cardCornerRadius="@dimen/_6sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@+id/h85per"
         app:layout_constraintEnd_toEndOf="parent"

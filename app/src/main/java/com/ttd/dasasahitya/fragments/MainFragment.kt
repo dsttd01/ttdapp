@@ -16,7 +16,8 @@ import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
 import com.ttd.dasasahitya.adapters.ImageViewAdapter
 import com.ttd.dasasahitya.databinding.FragmentMainBinding
-import com.ttd.dasasahitya.service.VaniService
+import com.ttd.dasasahitya.service.AcharyaVaniService
+import com.ttd.dasasahitya.service.UdayaVaniService
 import kotlin.math.abs
 
 class MainFragment : Fragment(R.layout.fragment_main) {
@@ -111,14 +112,25 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             }
         })
         binding.uvIvPlay.setOnClickListener {
-            (activity as MainActivity).startService(Intent((activity as MainActivity),VaniService::class.java))
+            (activity as MainActivity).startService(Intent((activity as MainActivity),UdayaVaniService::class.java))
             binding.uvIvPlay.visibility = View.GONE
             binding.uvIvPause.visibility = View.VISIBLE
         }
         binding.uvIvPause.setOnClickListener {
-            (activity as MainActivity).stopService(Intent((activity as MainActivity),VaniService::class.java))
+            (activity as MainActivity).stopService(Intent((activity as MainActivity),UdayaVaniService::class.java))
             binding.uvIvPlay.visibility = View.VISIBLE
             binding.uvIvPause.visibility = View.GONE
+        }
+
+        binding.avIvPlay.setOnClickListener {
+            (activity as MainActivity).startService(Intent((activity as MainActivity),AcharyaVaniService::class.java))
+            binding.avIvPlay.visibility = View.GONE
+            binding.avIvPause.visibility = View.VISIBLE
+        }
+        binding.avIvPause.setOnClickListener {
+            (activity as MainActivity).stopService(Intent((activity as MainActivity),AcharyaVaniService::class.java))
+            binding.avIvPlay.visibility = View.VISIBLE
+            binding.avIvPause.visibility = View.GONE
         }
     }
 }

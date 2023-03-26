@@ -31,7 +31,8 @@
             android:name=".MainActivity"
             android:exported="false"
             android:windowSoftInputMode="adjustPan"/>
-        <service android:name=".service.VaniService"/>
+        <service android:name=".service.UdayaVaniService"/>
+        <service android:name=".service.AcharyaVaniService"/>
     </application>
 
 </manifest>
