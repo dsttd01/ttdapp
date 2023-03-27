@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+Owner: TTD DSP
+Page name: Nitya Karma
+Developer: Swathi Rao
+Date: 27/03/23
+Navigation Stage: 0
+-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@color/background_home">
+
+    <!-- Grid for initial space: top of the page -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h1per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <!-- Grid for title space -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h5per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.05" />
+
+    <!-- Grid for title: Nitya Karma-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h12per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.12" />
+
+
+    <!-- Grid up to navigation bar -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/h85per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.85" />
+
+    <!-- Grid at the centre -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v50per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <!-- Grid for right column -->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v80per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.8" />
+
+    <!-- Grid for left column 1-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v20per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.2" />
+
+    <!-- Grid for left column 2-->
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/v1per"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.01" />
+
+    <View
+        android:id="@+id/round_view"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/corner_border_home"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/h5per"
+        app:layout_constraintVertical_bias="0.0" />
+
+    <TextView
+        android:id="@+id/ttd_header_nitya_karma"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins"
+        android:text="@string/ttd_dasa_sahitya_eng"
+        android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+        android:textColor="@color/text_home"
+        app:layout_constraintTop_toTopOf="@id/h1per"
+        app:layout_constraintBottom_toTopOf="@id/h5per"
+        app:layout_constraintEnd_toStartOf="@+id/v80per"
+        app:layout_constraintStart_toStartOf="@+id/v20per" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
