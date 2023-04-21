@@ -68,7 +68,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
 
     }
-    private fun setUpTransformer(){
+
+    private fun setUpTransformer() {
         val transformer = CompositePageTransformer()
         transformer.addTransformer(MarginPageTransformer(40))
         transformer.addTransformer { page, position ->
@@ -108,29 +109,78 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 handler.removeCallbacks(runnable)
-                handler.postDelayed(runnable,2000)
+                handler.postDelayed(runnable, 2000)
             }
         })
         binding.uvIvPlay.setOnClickListener {
-            (activity as MainActivity).startService(Intent((activity as MainActivity),UdayaVaniService::class.java))
+            (activity as MainActivity).startService(
+                Intent(
+                    (activity as MainActivity),
+                    UdayaVaniService::class.java
+                )
+            )
             binding.uvIvPlay.visibility = View.GONE
             binding.uvIvPause.visibility = View.VISIBLE
+            (activity as MainActivity).stopService(
+                Intent(
+                    (activity as MainActivity),
+                    AcharyaVaniService::class.java
+                )
+            )
+            binding.avIvPlay.visibility = View.VISIBLE
+            binding.avIvPause.visibility = View.GONE
         }
         binding.uvIvPause.setOnClickListener {
-            (activity as MainActivity).stopService(Intent((activity as MainActivity),UdayaVaniService::class.java))
+            (activity as MainActivity).stopService(
+                Intent(
+                    (activity as MainActivity),
+                    UdayaVaniService::class.java
+                )
+            )
             binding.uvIvPlay.visibility = View.VISIBLE
             binding.uvIvPause.visibility = View.GONE
         }
 
         binding.avIvPlay.setOnClickListener {
-            (activity as MainActivity).startService(Intent((activity as MainActivity),AcharyaVaniService::class.java))
+            (activity as MainActivity).startService(
+                Intent(
+                    (activity as MainActivity),
+                    AcharyaVaniService::class.java
+                )
+            )
             binding.avIvPlay.visibility = View.GONE
             binding.avIvPause.visibility = View.VISIBLE
+            (activity as MainActivity).stopService(
+                Intent(
+                    (activity as MainActivity),
+                    UdayaVaniService::class.java
+                )
+            )
+            binding.uvIvPlay.visibility = View.VISIBLE
+            binding.uvIvPause.visibility = View.GONE
         }
         binding.avIvPause.setOnClickListener {
-            (activity as MainActivity).stopService(Intent((activity as MainActivity),AcharyaVaniService::class.java))
+            (activity as MainActivity).stopService(
+                Intent(
+                    (activity as MainActivity),
+                    AcharyaVaniService::class.java
+                )
+            )
             binding.avIvPlay.visibility = View.VISIBLE
             binding.avIvPause.visibility = View.GONE
+        }
+
+        binding.cardPaatha.setOnClickListener {
+            (activity as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, PaathaFragment()).commit()
+        }
+        binding.cardNk.setOnClickListener {
+            (activity as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, NithyaKarmaFragment()).commit()
+        }
+        binding.cardNaik.setOnClickListener {
+            (activity as MainActivity).supportFragmentManager.beginTransaction()
+                .replace(R.id.fragment, NaimittikaKarmaFragment()).commit()
         }
     }
 }

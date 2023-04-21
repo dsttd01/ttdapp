@@ -25,7 +25,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.12" />
+        app:layout_constraintGuide_percent="0.15" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h35per"
@@ -112,14 +112,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h10per"
+        app:layout_constraintTop_toTopOf="@+id/ttd_hs"
         app:layout_constraintVertical_bias="0.0" />
 
     <View
         android:id="@+id/view3"
         android:layout_width="@dimen/_30sdp"
         android:layout_height="0dp"
-        android:layout_margin="@dimen/_2sdp"
+        android:layout_margin="@dimen/_15sdp"
         android:background="@drawable/round"
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintEnd_toStartOf="@+id/v20per"
@@ -197,7 +197,19 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h6per"
         app:srcCompat="@drawable/veena" />
-
+    <TextView
+        android:id="@+id/ttd_hs"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_5sdp"
+        android:gravity="center_horizontal"
+        android:text="Hare Shrinivasa"
+        android:textColor="@color/text_home"
+        android:textSize="@dimen/_10sdp"
+        app:fontFamily="@font/poppins"
+        app:layout_constraintEnd_toStartOf="@+id/v80per"
+        app:layout_constraintStart_toStartOf="@+id/v20per"
+        app:layout_constraintTop_toTopOf="@+id/h6per" />
     <TextView
         android:id="@+id/ttd_header"
         android:layout_width="0dp"
@@ -206,18 +218,17 @@
         android:gravity="center_horizontal"
         android:text="TTD Dasa Sahitya"
         android:textColor="@color/text_home"
-        android:textSize="@dimen/_14sdp"
+        android:textSize="@dimen/_10sdp"
         app:fontFamily="@font/poppins"
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintEnd_toStartOf="@+id/v80per"
-        app:layout_constraintStart_toStartOf="@+id/v20per"
-        app:layout_constraintTop_toTopOf="@+id/h6per" />
+        app:layout_constraintStart_toStartOf="@+id/v20per"/>
 
     <ImageView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:src="@drawable/notofication"
-        android:padding="@dimen/_5sdp"
+        android:padding="@dimen/_12sdp"
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/v80per"
@@ -600,7 +611,7 @@
 
     <TextView
         android:id="@+id/language"
-        android:layout_width="wrap_content"
+        android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center_horizontal|center_vertical"
         android:text="E / ಕ"
