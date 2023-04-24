@@ -99,8 +99,8 @@
     </androidx.cardview.widget.CardView>
 
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
         app:layout_constraintBottom_toBottomOf="@id/h85per_patha"
         app:layout_constraintEnd_toEndOf="parent"
@@ -528,11 +528,11 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
             app:backgroundTint="@color/text_home"
             app:borderWidth="@dimen/_8sdp"
-            app:fabCustomSize="@dimen/_50sdp"
+            app:fabCustomSize="@dimen/_45sdp"
             app:layout_anchor="@id/bottomAppBar"
             app:srcCompat="@drawable/ic_home"
             app:tint="@android:color/white" />
