@@ -11,11 +11,6 @@ Welcome to the wiki for the app being created specially for TTD DSP. You can fin
 We are yet to create rest of the features and pages for this app in progress.
 
 ## Current commit changes:
-1. added this document *README.md*
-2. Home screen changes:
-   a. Changed "Hare Srinivasa" spelling
-   b. Changed font sizes for app name, acharyavani, udayavani
-   c. Changed orientation to left for the 4 available buttons
-   d. Added navigation bar
-3. Paatha: Changed the icon, added 3 new buttons
-4. Nitya karma: Added relevant icons, changed orientation
+1. changed font size of buttons in patha page
+2. changed font color for buttons in patha description
+3. merging main and additional branch

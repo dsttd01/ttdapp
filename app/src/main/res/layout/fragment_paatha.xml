@@ -139,7 +139,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:text="@string/paatha_for_men"
-        android:textColor="@color/login_text"
+        android:textColor="@color/text_home"
+        android:textSize="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_view_men_patha"
         app:layout_constraintStart_toStartOf="@+id/card_view_men_patha"
         app:layout_constraintTop_toBottomOf="@+id/card_view_men_patha" />
@@ -170,7 +171,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:text="@string/paatha_for_women"
-        android:textColor="@color/login_text"
+        android:textColor="@color/text_home"
+        android:textSize="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_view_women_patha"
         app:layout_constraintStart_toStartOf="@+id/card_view_women_patha"
         app:layout_constraintTop_toBottomOf="@+id/card_view_women_patha" />
@@ -244,7 +246,8 @@
         android:layout_height="wrap_content"
         android:fontFamily="@font/poppins"
         android:text="@string/paatha_for_kids"
-        android:textColor="@color/login_text"
+        android:textColor="@color/text_home"
+        android:textSize="@dimen/_15sdp"
         app:layout_constraintEnd_toEndOf="@+id/card_view_kids_patha"
         app:layout_constraintStart_toStartOf="@+id/card_view_kids_patha"
         app:layout_constraintTop_toBottomOf="@+id/card_view_kids_patha" />
