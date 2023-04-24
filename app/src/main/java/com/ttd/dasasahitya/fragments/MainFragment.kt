@@ -172,15 +172,15 @@ class MainFragment : Fragment(R.layout.fragment_main) {
 
         binding.cardPaatha.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, PaathaFragment()).commit()
+                .replace(R.id.fragment, PaathaFragment()).addToBackStack(null).commit()
         }
         binding.cardNk.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, NithyaKarmaFragment()).commit()
+                .replace(R.id.fragment, NithyaKarmaFragment()).addToBackStack(null).commit()
         }
         binding.cardNaik.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, NaimittikaKarmaFragment()).commit()
+                .replace(R.id.fragment, NaimittikaKarmaFragment()).addToBackStack(null).commit()
         }
     }
 }

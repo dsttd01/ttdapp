@@ -25,4 +25,9 @@
     <string name="pravachana">Pravachana</string>
     <string name="dasara_pada">Dasara Pada</string>
     <string name="more">More</string>
+    <string name="takes_back_to_the_previous_page">takes back to the previous page</string>
+    <string name="back_button_description">back button description</string>
+    <string name="paatha_for_men">Patha for men</string>
+    <string name="paatha_for_women">Patha for women</string>
+    <string name="paatha_for_kids">Patha for kids</string>
 </resources>

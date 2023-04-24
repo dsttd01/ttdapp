@@ -39,7 +39,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.52" />
+        app:layout_constraintGuide_percent="0.54" />
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/h57per"
@@ -67,10 +67,10 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
-        app:layout_constraintGuide_percent="0.78" />
+        app:layout_constraintGuide_percent="0.78112173" />
 
     <androidx.constraintlayout.widget.Guideline
-        android:id="@+id/h85per"
+        android:id="@+id/h85per_patha"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:orientation="horizontal"
@@ -134,7 +134,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h85per"
+        app:layout_constraintTop_toTopOf="@+id/h85per_patha"
         app:layout_constraintVertical_bias="0.0">
 
         <com.google.android.material.bottomappbar.BottomAppBar
@@ -203,9 +203,9 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:text="Hare Shrinivasa"
+        android:text="Hare Srinivasa"
         android:textColor="@color/text_home"
-        android:textSize="@dimen/_10sdp"
+        android:textSize="@dimen/_9sdp"
         app:fontFamily="@font/poppins"
         app:layout_constraintEnd_toStartOf="@+id/v80per"
         app:layout_constraintStart_toStartOf="@+id/v20per"
@@ -218,7 +218,7 @@
         android:gravity="center_horizontal"
         android:text="TTD Dasa Sahitya"
         android:textColor="@color/text_home"
-        android:textSize="@dimen/_10sdp"
+        android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintEnd_toStartOf="@+id/v80per"
@@ -321,7 +321,7 @@
         android:gravity="center"
         android:text="Udayavaani"
         android:textColor="@color/text_home"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
         app:layout_constraintBottom_toTopOf="@+id/h57per"
         app:layout_constraintEnd_toEndOf="parent"
@@ -387,7 +387,7 @@
         android:gravity="center"
         android:text="Acharyavaani"
         android:textColor="@color/text_home"
-        android:textSize="@dimen/_15sdp"
+        android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
         app:layout_constraintBottom_toTopOf="@+id/h57per"
         app:layout_constraintEnd_toStartOf="@+id/v50per"
@@ -434,7 +434,8 @@
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
                 android:text="Paatha"
-                android:gravity="center"
+                android:gravity="left|center"
+                android:paddingLeft="20dp"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:fontFamily="@font/poppins"
@@ -488,7 +489,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
-                android:gravity="center"
+                android:gravity="left|center"
+                android:paddingLeft="20dp"
                 android:text="Parayana"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
@@ -543,7 +545,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
-                android:gravity="center"
+                android:gravity="left|center"
+                android:paddingLeft="20dp"
                 android:text="Nitya Karma"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
@@ -563,7 +566,7 @@
         android:layout_margin="@dimen/_5sdp"
         app:cardCornerRadius="@dimen/_6sdp"
         app:cardElevation="@dimen/_6sdp"
-        app:layout_constraintBottom_toTopOf="@+id/h85per"
+        app:layout_constraintBottom_toTopOf="@+id/h85per_patha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h78per">
@@ -596,7 +599,8 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
-                android:gravity="center"
+                android:gravity="left|center"
+                android:paddingLeft="20dp"
                 android:text="Naimittika Karma"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
