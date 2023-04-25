@@ -8,9 +8,33 @@ import androidx.fragment.app.Fragment
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
 import com.ttd.dasasahitya.databinding.FragmentNaimittikaKarmaBinding
+import com.ttd.dasasahitya.databinding.FragmentPaathaBinding
 
 class NaimittikaKarmaFragment:Fragment() {
     private lateinit var binding: FragmentNaimittikaKarmaBinding
+    private var isEnglish = true
+
+    private fun changeLanguage(binding: FragmentNaimittikaKarmaBinding) {
+        if (!isEnglish) {
+            binding.switchLanguage.setBackgroundResource(R.drawable.kannada)
+            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
+            binding.txtnaimittikarma.text = getString(R.string.naimittika_karma)
+            binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
+            binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana_kan)
+            binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada_kan)
+            binding.bottomNavView.menu.getItem(4).title = getString(R.string.more_kan)
+            binding.txtvrata.text = getString(R.string.vratha)
+        } else {
+            binding.switchLanguage.setBackgroundResource(R.drawable.english)
+            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
+            binding.txtnaimittikarma.text = getString(R.string.naimittika_karma_eng)
+            binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)
+            binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana)
+            binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada)
+            binding.bottomNavView.menu.getItem(4).title = getString(R.string.more)
+            binding.txtvrata.text = getString(R.string.vratha_eng)
+        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -23,6 +47,10 @@ class NaimittikaKarmaFragment:Fragment() {
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
+        }
+        binding.switchLanguage.setOnClickListener{
+            isEnglish = !isEnglish
+            changeLanguage(binding)
         }
     }
 }
