@@ -16,7 +16,6 @@ class NithyaKarmaFragment : Fragment() {
 
     private fun changeLanguage(binding: FragmentNityaKarmaBinding) {
         if (!isEnglish) {
-            binding.switchLanguage.setBackgroundResource(R.drawable.kannada)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
             binding.txtnityakarma.text = getString(R.string.nitya_krma)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
@@ -31,7 +30,6 @@ class NithyaKarmaFragment : Fragment() {
             binding.txtAnusandhana.text = getString(R.string.anusandhana)
             binding.txtChintana.text = getString(R.string.chintana)
         } else {
-            binding.switchLanguage.setBackgroundResource(R.drawable.english)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
             binding.txtnityakarma.text = getString(R.string.nitya_karma_eng)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)
@@ -60,10 +58,6 @@ class NithyaKarmaFragment : Fragment() {
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
-        }
-        binding.switchLanguage.setOnClickListener{
-            isEnglish = !isEnglish
-            changeLanguage(binding)
         }
     }
 }

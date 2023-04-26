@@ -212,14 +212,5 @@
 
     </ScrollView>
 
-    <ImageButton
-        android:id="@+id/switchLanguage"
-        android:layout_width="@dimen/_45sdp"
-        android:layout_height="@dimen/_45sdp"
-        android:background="@drawable/english"
-        android:contentDescription="@string/english_button"
-        app:layout_constraintEnd_toEndOf="@id/ttd_header"
-        app:layout_constraintBottom_toTopOf="@id/h10per" />
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

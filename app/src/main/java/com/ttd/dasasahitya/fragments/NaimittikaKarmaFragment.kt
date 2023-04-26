@@ -16,7 +16,6 @@ class NaimittikaKarmaFragment:Fragment() {
 
     private fun changeLanguage(binding: FragmentNaimittikaKarmaBinding) {
         if (!isEnglish) {
-            binding.switchLanguage.setBackgroundResource(R.drawable.kannada)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
             binding.txtnaimittikarma.text = getString(R.string.naimittika_karma)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
@@ -25,7 +24,6 @@ class NaimittikaKarmaFragment:Fragment() {
             binding.bottomNavView.menu.getItem(4).title = getString(R.string.more_kan)
             binding.txtvrata.text = getString(R.string.vratha)
         } else {
-            binding.switchLanguage.setBackgroundResource(R.drawable.english)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
             binding.txtnaimittikarma.text = getString(R.string.naimittika_karma_eng)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)
@@ -47,10 +45,6 @@ class NaimittikaKarmaFragment:Fragment() {
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
-        }
-        binding.switchLanguage.setOnClickListener{
-            isEnglish = !isEnglish
-            changeLanguage(binding)
         }
     }
 }

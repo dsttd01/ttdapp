@@ -15,7 +15,6 @@ class PaathaFragment : Fragment() {
 
     private fun changeLanguage(binding: FragmentPaathaBinding) {
         if (!isEnglish) {
-            binding.switchLanguage.setBackgroundResource(R.drawable.kannada)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
             binding.txtpatha.text = getString(R.string.pattha)
             binding.txtPaathaMen.text = getString(R.string.paatha_for_men)
@@ -26,7 +25,6 @@ class PaathaFragment : Fragment() {
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada_kan)
             binding.bottomNavView.menu.getItem(4).title = getString(R.string.more_kan)
         } else {
-            binding.switchLanguage.setBackgroundResource(R.drawable.english)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
             binding.txtPaathaMen.text = getString(R.string.paatha_for_men_eng)
             binding.txtpatha.text = getString(R.string.pattha_eng)
@@ -50,10 +48,6 @@ class PaathaFragment : Fragment() {
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
-        }
-        binding.switchLanguage.setOnClickListener{
-            isEnglish = !isEnglish
-            changeLanguage(binding)
         }
     }
 }
