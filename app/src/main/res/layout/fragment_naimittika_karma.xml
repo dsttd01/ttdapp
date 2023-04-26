@@ -26,7 +26,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:text="TTD Dasa Sahitya"
+        android:text="@string/naimittika_karma_eng"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_15sdp"
         app:fontFamily="@font/poppins"
@@ -44,60 +44,6 @@
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintStart_toStartOf="@+id/ttd_header"
         app:layout_constraintTop_toTopOf="parent" />
-
-    <androidx.cardview.widget.CardView
-        android:id="@+id/card_nk"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_margin="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_6sdp"
-        app:cardElevation="@dimen/_6sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h10per">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/text_home">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/cnv14per"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.14" />
-
-            <ImageView
-                android:id="@+id/iv_nk"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
-                android:scaleType="centerCrop"
-                android:background="#5d3002"
-                android:src="@drawable/homa"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cnv14per"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtnaimittikarma"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:gravity="center"
-                android:text="Naimittika Karma"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_17sdp"
-                app:fontFamily="@font/poppins"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/cnv14per"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
@@ -150,7 +96,7 @@
         android:layout_margin="@dimen/_5sdp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_nk">
+        app:layout_constraintTop_toBottomOf="@+id/ttd_header">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"

@@ -17,7 +17,6 @@ class NaimittikaKarmaFragment:Fragment() {
     private fun changeLanguage(binding: FragmentNaimittikaKarmaBinding) {
         if (!isEnglish) {
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
-            binding.txtnaimittikarma.text = getString(R.string.naimittika_karma)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
             binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana_kan)
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada_kan)
@@ -25,7 +24,6 @@ class NaimittikaKarmaFragment:Fragment() {
             binding.txtvrata.text = getString(R.string.vratha)
         } else {
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
-            binding.txtnaimittikarma.text = getString(R.string.naimittika_karma_eng)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)
             binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana)
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada)

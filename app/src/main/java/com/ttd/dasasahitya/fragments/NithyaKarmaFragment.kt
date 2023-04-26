@@ -16,8 +16,7 @@ class NithyaKarmaFragment : Fragment() {
 
     private fun changeLanguage(binding: FragmentNityaKarmaBinding) {
         if (!isEnglish) {
-            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
-            binding.txtnityakarma.text = getString(R.string.nitya_krma)
+            binding.ttdHeader.text = getString(R.string.nitya_krma)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
             binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana_kan)
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada_kan)
@@ -30,8 +29,7 @@ class NithyaKarmaFragment : Fragment() {
             binding.txtAnusandhana.text = getString(R.string.anusandhana)
             binding.txtChintana.text = getString(R.string.chintana)
         } else {
-            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
-            binding.txtnityakarma.text = getString(R.string.nitya_karma_eng)
+            binding.ttdHeader.text = getString(R.string.nitya_karma_eng)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)
             binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana)
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada)

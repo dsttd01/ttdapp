@@ -43,6 +43,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     private fun changeLanguage(binding: FragmentMainBinding) {
         if (!isEnglish) {
             binding.language.setBackgroundResource(R.drawable.kannada)
+            binding.ttdHs.text = getString(R.string.hare_shrinivasa_kan)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
             binding.txtAcharyavani.text = getString(R.string.acharya_vani)
             binding.txtUdayavaani.text = getString(R.string.udaya_vani)
@@ -56,6 +57,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             binding.bottomNavView.menu.getItem(4).title = getString(R.string.more_kan)
         } else {
             binding.language.setBackgroundResource(R.drawable.english)
+            binding.ttdHs.text = getString(R.string.hare_shrinivasa)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
             binding.txtAcharyavani.text = getString(R.string.acharya_vani_eng)
             binding.txtUdayavaani.text = getString(R.string.udaya_vani_eng)

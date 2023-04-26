@@ -1,6 +1,7 @@
 <resources>
     <string name="app_name">TTD DasaSahitya</string>
     <string name="hare_shrinivasa">Hare Srinivasa</string>
+    <string name="hare_shrinivasa_kan">ಹರೇ ಶ್ರೀನಿವಾಸ</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ttd_dasa_sahitya">ಟಿ.ಟಿ.ಡಿ ದಾಸಸಾಹಿತ್ಯ</string>

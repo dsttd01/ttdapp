@@ -15,8 +15,7 @@ class PaathaFragment : Fragment() {
 
     private fun changeLanguage(binding: FragmentPaathaBinding) {
         if (!isEnglish) {
-            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
-            binding.txtpatha.text = getString(R.string.pattha)
+            binding.ttdHeader.text = getString(R.string.pattha)
             binding.txtPaathaMen.text = getString(R.string.paatha_for_men)
             binding.txtPaathaWomen.text = getString(R.string.paatha_for_women)
             binding.txtPaathaKids.text = getString(R.string.paatha_for_kids)
@@ -25,9 +24,8 @@ class PaathaFragment : Fragment() {
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada_kan)
             binding.bottomNavView.menu.getItem(4).title = getString(R.string.more_kan)
         } else {
-            binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya_eng)
+            binding.ttdHeader.text = getString(R.string.pattha_eng)
             binding.txtPaathaMen.text = getString(R.string.paatha_for_men_eng)
-            binding.txtpatha.text = getString(R.string.pattha_eng)
             binding.txtPaathaWomen.text = getString(R.string.paatha_for_women_eng)
             binding.txtPaathaKids.text = getString(R.string.paatha_for_kids_eng)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender)

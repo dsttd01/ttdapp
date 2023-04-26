@@ -33,7 +33,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:text="TTD Dasa Sahitya"
+        android:text="@string/pattha_eng"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_15sdp"
         app:fontFamily="@font/poppins"
@@ -60,71 +60,16 @@
         app:layout_constraintGuide_percent="0.85" />
 
     <androidx.cardview.widget.CardView
-        android:id="@+id/card_nk"
-        android:layout_width="0dp"
-        android:layout_height="@dimen/_45sdp"
-        android:layout_margin="@dimen/_10sdp"
-        app:cardCornerRadius="@dimen/_6sdp"
-        app:cardElevation="@dimen/_6sdp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h10per">
-
-        <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:background="@color/text_home">
-
-            <androidx.constraintlayout.widget.Guideline
-                android:id="@+id/cnv14per"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:orientation="vertical"
-                app:layout_constraintGuide_percent="0.14" />
-
-            <ImageView
-                android:id="@+id/iv_nk"
-                android:layout_width="0dp"
-                android:layout_height="0dp"
-                android:layout_weight="0.2"
-                android:background="@null"
-                android:scaleType="centerCrop"
-                android:src="@drawable/guru"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toStartOf="@+id/cnv14per"
-                app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintTop_toTopOf="parent" />
-
-            <TextView
-                android:id="@+id/txtpatha"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.8"
-                android:gravity="center"
-                android:text="Patha"
-                android:textColor="@color/white"
-                android:textSize="@dimen/_17sdp"
-                app:fontFamily="@font/poppins"
-                app:layout_constraintBottom_toBottomOf="parent"
-                app:layout_constraintEnd_toEndOf="parent"
-                app:layout_constraintStart_toStartOf="@+id/cnv14per"
-                app:layout_constraintTop_toTopOf="parent" />
-
-        </androidx.constraintlayout.widget.ConstraintLayout>
-    </androidx.cardview.widget.CardView>
-
-    <androidx.cardview.widget.CardView
         android:id="@+id/card_view_men_patha"
         android:layout_width="@dimen/_90sdp"
         android:layout_height="@dimen/_90sdp"
         android:layout_margin="@dimen/_10sdp"
-        android:layout_marginTop="120dp"
         app:cardCornerRadius="@dimen/_12sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@id/h52per_patha"
         app:layout_constraintEnd_toStartOf="@id/v50per_patha"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/card_nk">
+        app:layout_constraintTop_toTopOf="@+id/h10per">
 
         <ImageView
             android:layout_width="match_parent"
@@ -151,19 +96,19 @@
         android:layout_width="@dimen/_90sdp"
         android:layout_height="@dimen/_90sdp"
         android:layout_margin="@dimen/_10sdp"
-        android:layout_marginTop="13dp"
         app:cardCornerRadius="@dimen/_12sdp"
         app:cardElevation="@dimen/_6sdp"
         app:layout_constraintBottom_toTopOf="@+id/h52per_patha"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="@+id/v50per_patha"
-        app:layout_constraintTop_toBottomOf="@+id/card_nk">
+        app:layout_constraintTop_toTopOf="@+id/h10per">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/women"
             android:contentDescription="@string/paatha_for_women_eng"
-            android:scaleType="centerCrop"/>
+            android:scaleType="centerCrop"
+            android:src="@drawable/women" />
 
     </androidx.cardview.widget.CardView>
 
@@ -234,13 +179,13 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h52per_patha">
+
         <ImageView
             android:layout_width="match_parent"
             android:layout_height="match_parent"
+            android:contentDescription="@string/paatha_for_kids_eng"
             android:scaleType="centerCrop"
-            android:src="@drawable/kids"
-            android:contentDescription="@string/paatha_for_kids_eng">
-        </ImageView>
+            android:src="@drawable/kids" />
     </androidx.cardview.widget.CardView>
 
     <TextView
