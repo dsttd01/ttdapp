@@ -5,17 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ttd.dasasahitya.DasaSahityaApp
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
 import com.ttd.dasasahitya.databinding.FragmentNityaKarmaBinding
-import com.ttd.dasasahitya.databinding.FragmentPaathaBinding
+import com.ttd.dasasahitya.utils.EncryptedSharedPreferenceUtil
 
 class NithyaKarmaFragment : Fragment() {
     private lateinit var binding: FragmentNityaKarmaBinding
-    private var isEnglish = true
 
     private fun changeLanguage(binding: FragmentNityaKarmaBinding) {
-        if (!isEnglish) {
+        if (!EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, DasaSahityaApp.applicationContext)) {
             binding.ttdHeader.text = getString(R.string.nitya_krma)
             binding.bottomNavView.menu.getItem(0).title = getString(R.string.calender_kan)
             binding.bottomNavView.menu.getItem(1).title = getString(R.string.pravachana_kan)
@@ -53,6 +53,7 @@ class NithyaKarmaFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        changeLanguage(binding)
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()

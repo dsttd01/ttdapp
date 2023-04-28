@@ -12,18 +12,20 @@ import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.ttd.dasasahitya.DasaSahityaApp
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
 import com.ttd.dasasahitya.adapters.ImageViewAdapter
 import com.ttd.dasasahitya.databinding.FragmentMainBinding
 import com.ttd.dasasahitya.service.AcharyaVaniService
 import com.ttd.dasasahitya.service.UdayaVaniService
+import com.ttd.dasasahitya.utils.EncryptedSharedPreferenceUtil
 import kotlin.math.abs
 
 class MainFragment : Fragment(R.layout.fragment_main) {
     private lateinit var binding: FragmentMainBinding
     private lateinit var handler: Handler
-    private var isEnglish = true
+
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -41,7 +43,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun changeLanguage(binding: FragmentMainBinding) {
-        if (!isEnglish) {
+        if (!EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, DasaSahityaApp.applicationContext)) {
             binding.language.setBackgroundResource(R.drawable.kannada)
             binding.ttdHs.text = getString(R.string.hare_shrinivasa_kan)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
@@ -98,7 +100,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         changeLanguage(binding)
         handler = Handler(Looper.myLooper()!!)
         binding.language.setOnClickListener {
-            isEnglish = !isEnglish
+            EncryptedSharedPreferenceUtil.saveSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value,
+                !EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, (activity as MainActivity)),
+                (activity as MainActivity))
             changeLanguage(binding)
         }
         binding.viewPager.adapter = ImageViewAdapter(binding.viewPager)

@@ -5,16 +5,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.ttd.dasasahitya.DasaSahityaApp
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
 import com.ttd.dasasahitya.databinding.FragmentPaathaBinding
+import com.ttd.dasasahitya.utils.EncryptedSharedPreferenceUtil
 
 class PaathaFragment : Fragment() {
     private lateinit var binding: FragmentPaathaBinding
-    private var isEnglish = true
 
     private fun changeLanguage(binding: FragmentPaathaBinding) {
-        if (!isEnglish) {
+        if (!EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, DasaSahityaApp.applicationContext)) {
             binding.ttdHeader.text = getString(R.string.pattha)
             binding.txtPaathaMen.text = getString(R.string.paatha_for_men)
             binding.txtPaathaWomen.text = getString(R.string.paatha_for_women)
@@ -43,6 +44,7 @@ class PaathaFragment : Fragment() {
         return binding.root
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        changeLanguage(binding)
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
