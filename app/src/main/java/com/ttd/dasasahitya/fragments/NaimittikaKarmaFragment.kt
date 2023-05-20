@@ -46,5 +46,8 @@ class NaimittikaKarmaFragment:Fragment() {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
+        binding.nkVratha.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
     }
 }

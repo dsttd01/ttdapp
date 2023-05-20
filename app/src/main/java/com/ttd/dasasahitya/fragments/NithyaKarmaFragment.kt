@@ -58,5 +58,26 @@ class NithyaKarmaFragment : Fragment() {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
+        binding.nkPratahSmarana.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkSuprabhata.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkSnana.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkPooja.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkDhyana.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkAnusandhana.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
+        binding.nkChintana.setOnClickListener{
+            (activity as MainActivity).basicAlert()
+        }
     }
 }

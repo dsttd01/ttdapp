@@ -59,6 +59,7 @@
             android:orientation="vertical">
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_pratah_smarana"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -113,6 +114,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_suprabhata"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -167,6 +169,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_snana"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -221,6 +224,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_pooja"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -275,6 +279,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_dhyana"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -329,6 +334,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_anusandhana"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"
@@ -383,6 +389,7 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:id="@+id/nk_chintana"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_45sdp"
                 android:layout_margin="@dimen/_10sdp"

@@ -190,5 +190,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, NaimittikaKarmaFragment()).addToBackStack(null).commit()
         }
+        binding.cardParayana.setOnClickListener {
+            (activity as MainActivity).basicAlert()
+        }
     }
 }
