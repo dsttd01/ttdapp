@@ -49,14 +49,5 @@ class PaathaFragment : Fragment() {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
-        binding.pCvMen.setOnClickListener{
-            (activity as MainActivity).basicAlert()
-        }
-        binding.pCvWomen.setOnClickListener{
-            (activity as MainActivity).basicAlert()
-        }
-        binding.pCvKids.setOnClickListener{
-            (activity as MainActivity).basicAlert()
-        }
     }
 }

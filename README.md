@@ -11,4 +11,5 @@ Welcome to the wiki for the app being created specially for TTD DSP. You can fin
 We are yet to create rest of the features and pages for this app in progress.
 
 ## Current commit changes:
-1. created alerts for features under development
+1. corrected patha header
+2. reduced space for acharyavani and udayavani
