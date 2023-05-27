@@ -20,7 +20,25 @@
         android:title="Dasarapada" />
 
     <item
-        android:id="@+id/profile"
+        android:id="@+id/more"
         android:icon="@drawable/more"
-        android:title="More" />
+        android:title="More">
+        <menu>
+            <item android:id="@+id/profile"
+                android:icon="@drawable/profile_24"
+                android:title="@string/profile" />
+            <item android:id="@+id/events"
+                android:icon="@drawable/event_note_24"
+                android:title="@string/events" />
+            <item android:id="@+id/gallery"
+                android:icon="@drawable/photo_library_24"
+                android:title="@string/gallery" />
+            <item android:id="@+id/website"
+                android:icon="@drawable/launch_24"
+                android:title="@string/website" />
+            <item android:id="@+id/about"
+                android:icon="@drawable/baseline_info_24"
+                android:title="@string/About" />
+        </menu>
+    </item>
 </menu>

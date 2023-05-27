@@ -51,4 +51,9 @@
     <string name="chintana">ಚಿಂತನ</string>
     <string name="vratha_eng">Vratha</string>
     <string name="vratha">ವ್ರತ</string>
+    <string name="profile">Profile</string>
+    <string name="events">Events</string>
+    <string name="gallery">Gallery</string>
+    <string name="website">Website</string>
+    <string name="About">About</string>
 </resources>
