@@ -5,6 +5,8 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.ttd.dasasahitya.DasaSahityaApp
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
@@ -49,5 +51,24 @@ class PaathaFragment : Fragment() {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
+        binding.pcvMen.setOnClickListener{
+            getAlertBox(it)
+        }
+        binding.pcvWomen.setOnClickListener{
+            getAlertBox(it)
+        }
+        binding.pcvKids.setOnClickListener{
+            getAlertBox(it)
+        }
+    }
+
+    private fun getAlertBox(v: View) {
+        MaterialAlertDialogBuilder(activity as MainActivity)
+            .setTitle("Developer Message")
+            .setMessage("Will soon be available")
+            .setNeutralButton("OK") { _, _ ->
+                Snackbar.make(v, "Exited from alert", Snackbar.LENGTH_SHORT).show()
+            }
+            .show()
     }
 }

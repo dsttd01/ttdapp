@@ -7,11 +7,14 @@ import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.cardview.widget.CardView
 import androidx.fragment.app.Fragment
 import androidx.recyclerview.widget.RecyclerView
 import androidx.viewpager2.widget.CompositePageTransformer
 import androidx.viewpager2.widget.MarginPageTransformer
 import androidx.viewpager2.widget.ViewPager2
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import com.google.android.material.snackbar.Snackbar
 import com.ttd.dasasahitya.DasaSahityaApp
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
@@ -190,5 +193,21 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, NaimittikaKarmaFragment()).addToBackStack(null).commit()
         }
+        binding.cardParayana.setOnClickListener {
+            this.getAlertBox(it)
+        }
+        binding.mainNotificationBell.setOnClickListener{
+            getAlertBox(it)
+        }
+    }
+
+    private fun getAlertBox(v: View) {
+        MaterialAlertDialogBuilder(activity as MainActivity)
+            .setTitle("Developer Message")
+            .setMessage("Will soon be available")
+            .setNeutralButton("OK") { _, _ ->
+                Snackbar.make(v, "Exited from alert", Snackbar.LENGTH_SHORT).show()
+            }
+            .show()
     }
 }

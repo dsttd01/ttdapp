@@ -69,6 +69,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_ps"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -123,6 +124,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_sup"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -177,6 +179,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_snana"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -231,6 +234,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_pooja"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -285,6 +289,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_dhyana"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -339,6 +344,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_anusandhana"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">
@@ -393,6 +399,7 @@
                 app:layout_constraintTop_toTopOf="@+id/h10per">
 
                 <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/nitk_chintana"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:background="@color/text_home">

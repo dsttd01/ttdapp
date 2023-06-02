@@ -21,7 +21,8 @@
 
     <item
         android:id="@+id/more"
-        android:title=""
+        android:icon="@drawable/more"
+        android:title="@string/more"
         >
         <!--@note:bottom navigation menu cannot have sub menus-->
         <!--<menu>
