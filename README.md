@@ -11,6 +11,6 @@ Welcome to the wiki for the app being created specially for TTD DSP. You can fin
 We are yet to create rest of the features and pages for this app in progress.
 
 ## Current commit changes:
-1. created alerts
-2. brought down the language button
-3. fixed the abrupt crashing bugs
+1. generating apk for the testing
+2. apk: ttd-dsp_ver-0.1.2_03.06.2023.apk
+3. added calendar fragment, yet to implement
