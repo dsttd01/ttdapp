@@ -38,6 +38,27 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.bottomNavView.background = null
         binding.bottomNavView.menu.getItem(2).isEnabled = false
 
+
+        // navigation for the bottom
+        binding.bottomNavView.setOnItemSelectedListener {
+            when (it.itemId) {
+                R.id.calender -> {
+                    (activity as MainActivity).supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment, CalendarFragment()).addToBackStack(null).commit()
+                    true
+                }
+                R.id.pravachana -> {
+                    false
+                }
+                R.id.dasarapada -> {
+                    false
+                }
+                else -> {
+                    false
+                }
+            }
+        }
+
         return binding.root
     }
 

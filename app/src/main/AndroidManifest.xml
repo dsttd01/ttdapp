@@ -4,14 +4,11 @@
     <application
         android:name=".DasaSahityaApp"
         android:allowBackup="true"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@mipmap/ttd_dsp_logo"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@mipmap/ttd_dsp_logo_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.TTDDasaSahitya" >
-        <activity
-            android:name=".SettingsActivity"
-            android:exported="false" />
         <activity
             android:name=".ScreenSplash"
             android:exported="true"

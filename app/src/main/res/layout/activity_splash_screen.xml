@@ -19,12 +19,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!--
+    @todo: can create a rotating logo here
+    <View
+        android:id="@+id/viewSplash"
+        android:layout_width="@dimen/_90sdp"
+        android:layout_height="@dimen/_90sdp"
+        android:alpha="01"
+        android:background="@mipmap/ttd_dsp_logo_foreground"
+        app:layout_constraintBottom_toBottomOf="@+id/header"
+        app:layout_constraintEnd_toEndOf="@+id/imageView"
+        app:layout_constraintStart_toStartOf="@+id/imageView"
+        app:layout_constraintTop_toTopOf="@+id/imageView" />-->
+
     <TextView
         android:id="@+id/header"
         style="@style/Theme.ScreenSplash"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Hare Srinivasa"
+        android:text="@string/hare_srinivasa"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
