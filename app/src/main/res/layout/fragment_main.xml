@@ -139,14 +139,12 @@
 
     <View
         android:id="@+id/view3"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="0dp"
-        android:layout_margin="@dimen/_15sdp"
-        android:background="@drawable/round"
+        android:layout_width="@dimen/_85sdp"
+        android:layout_height="@dimen/_85sdp"
+        android:background="@mipmap/ttd_dsp_logo_foreground"
         app:layout_constraintBottom_toTopOf="@+id/h10per"
-        app:layout_constraintEnd_toStartOf="@+id/v20per"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/h6per" />
+        app:layout_constraintTop_toTopOf="@+id/h1per" />
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
@@ -208,7 +206,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <ImageView
+    <!--<ImageView
         android:id="@+id/veena_image"
         android:layout_width="0dp"
         android:layout_height="0dp"
@@ -218,14 +216,14 @@
         app:layout_constraintEnd_toStartOf="@+id/v20per"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h6per"
-        app:srcCompat="@drawable/veena" />
+        app:srcCompat="@drawable/ttd_dsp_logo" />-->
     <TextView
         android:id="@+id/ttd_hs"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:text="Hare Srinivasa"
+        android:text="@string/hare_shrinivasa"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_9sdp"
         app:fontFamily="@font/poppins"
@@ -238,7 +236,7 @@
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_5sdp"
         android:gravity="center_horizontal"
-        android:text="TTD Dasa Sahitya"
+        android:text="@string/ttd_dasa_sahitya_eng"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
@@ -342,7 +340,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="Udayavaani"
+        android:text="@string/udaya_vani_eng"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
@@ -408,7 +406,7 @@
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:gravity="center"
-        android:text="Acharyavaani"
+        android:text="@string/acharya_vani_eng"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_12sdp"
         app:fontFamily="@font/poppins"
@@ -456,7 +454,7 @@
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="0.8"
-                android:text="Paatha"
+                android:text="@string/pattha_eng"
                 android:gravity="left|center"
                 android:paddingLeft="20dp"
                 android:textColor="@color/white"
@@ -514,7 +512,7 @@
                 android:layout_weight="0.8"
                 android:gravity="left|center"
                 android:paddingLeft="20dp"
-                android:text="Parayana"
+                android:text="@string/parayana_eng"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:fontFamily="@font/poppins"
@@ -570,7 +568,7 @@
                 android:layout_weight="0.8"
                 android:gravity="left|center"
                 android:paddingLeft="20dp"
-                android:text="Nitya Karma"
+                android:text="@string/nitya_karma_eng"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:fontFamily="@font/poppins"
@@ -624,7 +622,7 @@
                 android:layout_weight="0.8"
                 android:gravity="left|center"
                 android:paddingLeft="20dp"
-                android:text="Naimittika Karma"
+                android:text="@string/naimittika_karma_eng"
                 android:textColor="@color/white"
                 android:textSize="@dimen/_15sdp"
                 app:fontFamily="@font/poppins"
@@ -635,7 +633,6 @@
 
         </androidx.constraintlayout.widget.ConstraintLayout>
     </androidx.cardview.widget.CardView>
-
     <ImageButton
         android:id="@+id/language"
         android:layout_width="@dimen/_35sdp"

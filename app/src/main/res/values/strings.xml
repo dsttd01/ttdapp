@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">TTD DasaSahitya</string>
-    <string name="hare_shrinivasa">Hare Srinivasa</string>
-    <string name="hare_shrinivasa_kan">ಹರೇ ಶ್ರೀನಿವಾಸ</string>
+    <string name="hare_shrinivasa">॥ Hare Srinivasa ॥</string>
+    <string name="hare_shrinivasa_kan">॥ ಹರೇ ಶ್ರೀನಿವಾಸ ॥</string>
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="ttd_dasa_sahitya">ಟಿ.ಟಿ.ಡಿ ದಾಸಸಾಹಿತ್ಯ</string>
@@ -12,8 +12,8 @@
     <string name="nitya_krma">ನಿತ್ಯ ಕರ್ಮ</string>
     <string name="naimittika_karma">ನೈಮಿತ್ತಿಕ ಕರ್ಮ</string>
     <string name="ttd_dasa_sahitya_eng">TTD Dasa Sahitya</string>
-    <string name="acharya_vani_eng">Acharya Vani</string>
-    <string name="udaya_vani_eng">Udaya Vani</string>
+    <string name="acharya_vani_eng">Acharyavani</string>
+    <string name="udaya_vani_eng">Udayavani</string>
     <string name="pattha_eng">Patha</string>
     <string name="parayana_eng">Parayana</string>
     <string name="nitya_karma_eng">Nitya Karma</string>
@@ -56,4 +56,5 @@
     <string name="gallery">Gallery</string>
     <string name="website">Website</string>
     <string name="About">About</string>
+    <string name="hare_srinivasa">Hare Srinivasa</string>
 </resources>
