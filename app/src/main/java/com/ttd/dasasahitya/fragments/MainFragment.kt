@@ -1,6 +1,9 @@
 package com.ttd.dasasahitya.fragments
 
 import android.content.Intent
+import android.graphics.Color
+import android.graphics.drawable.ColorDrawable
+import android.graphics.drawable.Drawable
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -47,12 +50,23 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                         .replace(R.id.fragment, CalendarFragment()).addToBackStack(null).commit()
                     true
                 }
+
                 R.id.pravachana -> {
                     false
                 }
+
                 R.id.dasarapada -> {
                     false
                 }
+
+                R.id.more -> {
+                    MaterialAlertDialogBuilder(activity as MainActivity)
+                        .setView(R.layout.alert_more)
+                        .setBackground(ColorDrawable(Color.TRANSPARENT))
+                        .show()
+                    false
+                }
+
                 else -> {
                     false
                 }
@@ -67,7 +81,11 @@ class MainFragment : Fragment(R.layout.fragment_main) {
     }
 
     private fun changeLanguage(binding: FragmentMainBinding) {
-        if (!EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, DasaSahityaApp.applicationContext)) {
+        if (!EncryptedSharedPreferenceUtil.getSPBoolean(
+                EncryptedSharedPreferenceUtil.isEnglish.value,
+                DasaSahityaApp.applicationContext
+            )
+        ) {
             binding.language.setBackgroundResource(R.drawable.kannada)
             binding.ttdHs.text = getString(R.string.hare_shrinivasa_kan)
             binding.ttdHeader.text = getString(R.string.ttd_dasa_sahitya)
@@ -124,9 +142,14 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         changeLanguage(binding)
         handler = Handler(Looper.myLooper()!!)
         binding.language.setOnClickListener {
-            EncryptedSharedPreferenceUtil.saveSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value,
-                !EncryptedSharedPreferenceUtil.getSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, (activity as MainActivity)),
-                (activity as MainActivity))
+            EncryptedSharedPreferenceUtil.saveSPBoolean(
+                EncryptedSharedPreferenceUtil.isEnglish.value,
+                !EncryptedSharedPreferenceUtil.getSPBoolean(
+                    EncryptedSharedPreferenceUtil.isEnglish.value,
+                    (activity as MainActivity)
+                ),
+                (activity as MainActivity)
+            )
             changeLanguage(binding)
         }
         binding.viewPager.adapter = ImageViewAdapter(binding.viewPager)
@@ -217,7 +240,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         binding.cardParayana.setOnClickListener {
             this.getAlertBox(it)
         }
-        binding.mainNotificationBell.setOnClickListener{
+        binding.mainNotificationBell.setOnClickListener {
             getAlertBox(it)
         }
     }

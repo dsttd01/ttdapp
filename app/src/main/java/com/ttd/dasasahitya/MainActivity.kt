@@ -1,14 +1,17 @@
 package com.ttd.dasasahitya
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.ttd.dasasahitya.databinding.ActivityMainBinding
 import com.ttd.dasasahitya.fragments.MainFragment
 import com.ttd.dasasahitya.utils.EncryptedSharedPreferenceUtil
+import kotlin.system.exitProcess
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -16,40 +19,31 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        EncryptedSharedPreferenceUtil.saveSPBoolean(EncryptedSharedPreferenceUtil.isEnglish.value, true, DasaSahityaApp.applicationContext)
+        EncryptedSharedPreferenceUtil.saveSPBoolean(
+            EncryptedSharedPreferenceUtil.isEnglish.value,
+            true,
+            DasaSahityaApp.applicationContext
+        )
         supportFragmentManager.beginTransaction().replace(R.id.fragment, MainFragment()).commit()
     }
 
-    //@todo: add this code block once menu is finalized
-
-    /*override fun onCreateOptionsMenu(menu: Menu?): Boolean {
-        menuInflater.inflate(R.menu.dotted_more_menu, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when(item.itemId) {
-            R.id.profile -> {
-                Toast.makeText(this,"Profile",Toast.LENGTH_LONG).show()
-                true
-            }
-            R.id.events -> {
-                Toast.makeText(this,"Event",Toast.LENGTH_LONG).show()
-                true
-            }
-            R.id.gallery -> {
-                Toast.makeText(this,"Gallery",Toast.LENGTH_LONG).show()
-                true
-            }
-            R.id.website -> {
-                Toast.makeText(this,"Website",Toast.LENGTH_LONG).show()
-                true
-            }
-            R.id.about -> {
-                Toast.makeText(this,"About",Toast.LENGTH_LONG).show()
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
+    override fun onBackPressed() {
+        if (supportFragmentManager.findFragmentById(R.id.fragment) !is MainFragment) {
+            super.onBackPressed()
+        } else {
+            MaterialAlertDialogBuilder(this)
+                .setMessage("Are your sure that you want to exit?")
+                .setPositiveButton("OK") { _, _ ->
+                    startActivity(
+                        Intent(Intent.ACTION_MAIN)
+                            .addCategory(Intent.CATEGORY_HOME)
+                            .setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP)
+                    )
+                }
+                .setNegativeButton("Cancel") { dialog, _ ->
+                    dialog.cancel()
+                }
+                .show()
         }
-    }*/
+    }
 }
