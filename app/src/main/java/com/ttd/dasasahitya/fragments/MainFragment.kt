@@ -114,7 +114,6 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             binding.bottomNavView.menu.getItem(3).title = getString(R.string.dasara_pada)
             binding.bottomNavView.menu.getItem(4).title = getString(R.string.more)
         }
-
     }
 
     private fun setUpTransformer() {

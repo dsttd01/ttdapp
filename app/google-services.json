@@ -1,41 +1,33 @@
 {
   "project_info": {
-    "project_number": "709215459564",
-    "project_id": "ttd-dasa-sahitya",
-    "storage_bucket": "ttd-dasa-sahitya.appspot.com"
+    "project_number": "259646204385",
+    "project_id": "dasa-sahithya-project",
+    "storage_bucket": "dasa-sahithya-project.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:709215459564:android:6cdc7249b45a787aaaedc9",
+        "mobilesdk_app_id": "1:259646204385:android:a3d789541f790cb08d0aa0",
         "android_client_info": {
           "package_name": "com.ttd.dasasahitya"
         }
       },
       "oauth_client": [
         {
-          "client_id": "709215459564-92masgs1a20dp22rer2j8kkbngjemd5v.apps.googleusercontent.com",
-          "client_type": 1,
-          "android_info": {
-            "package_name": "com.ttd.dasasahitya",
-            "certificate_hash": "050913f844ac8af324446000a9facf63ccdefea5"
-          }
-        },
-        {
-          "client_id": "709215459564-dephrdr7ho8ln8e6dfk82trc84mjjlsn.apps.googleusercontent.com",
+          "client_id": "259646204385-bakmb8cah9gv94d4d7ik524d9poppt1v.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCRdwGebM4nWFVk94I3jUo_c5SQXVgbAwM"
+          "current_key": "AIzaSyCDAGhXaa8M6J2bF4c8ifCKalP1Sqt7VlM"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "709215459564-dephrdr7ho8ln8e6dfk82trc84mjjlsn.apps.googleusercontent.com",
+              "client_id": "259646204385-bakmb8cah9gv94d4d7ik524d9poppt1v.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

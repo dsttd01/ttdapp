@@ -2,6 +2,7 @@ plugins {
     id 'com.android.application'
     id 'kotlin-android'
     id 'com.google.gms.google-services'
+    id 'org.jetbrains.kotlin.android'
 }
 
 android {
@@ -70,4 +71,8 @@ dependencies {
 
     //Security
     implementation "androidx.security:security-crypto:1.1.0-alpha06"
+
+    //Firebase
+    implementation 'com.google.firebase:firebase-storage-ktx:20.2.1'
+
 }
