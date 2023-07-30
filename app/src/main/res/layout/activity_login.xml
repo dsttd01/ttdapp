@@ -63,18 +63,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/namo_venkateshaya" />
 
+    <!-- @todo:
+        1. change dimensions of the button
+        2. change the case
+        3. download new gopuram background
+        -->
+
     <Button
         android:id="@+id/btn_guest_login"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Guest Login"
+        android:text="@string/guest_login"
         android:textSize="@dimen/_20sdp"
         android:fontFamily="@font/poppins"
         app:backgroundTint="@color/login_background"
         app:layout_constraintBottom_toBottomOf="@+id/view"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textor" />
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- @todo: download and add new drawable -->
 
     <ImageView
         android:id="@+id/gmailImage"
@@ -88,6 +95,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView2"
         app:srcCompat="@drawable/images" />
+
+    <!-- @todo: download and add new drawable -->
 
     <ImageView
         android:id="@+id/faceBookImage"
@@ -107,11 +116,13 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/_10sdp"
+        android:layout_marginBottom="65dp"
         android:gravity="center_horizontal"
         android:text="(or)"
         android:textColor="@color/login_background"
         android:textSize="@dimen/_20sdp"
         app:fontFamily="@font/poppins"
+        app:layout_constraintBottom_toTopOf="@+id/btn_guest_login"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/gmailImage" />

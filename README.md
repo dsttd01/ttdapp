@@ -10,7 +10,5 @@ Welcome to the wiki for the app being created specially for TTD DSP.
 ![Nitya karma](README images/Nitya karma.png)
 ![Naimittika karma](README images/Naimittika karma.png)
 
-## Current commit changes:
-1. added new logo files
-2. changed the logo in the home page
-3. created navigation for the calendar from bottom navigation in main menu
+## Todo:
+1. make the buttons from home screen and others look uniform

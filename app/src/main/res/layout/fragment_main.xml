@@ -105,6 +105,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <!-- @todo: create rounded top, ref-->
     <View
         android:id="@+id/round_view"
         android:layout_width="0dp"
@@ -114,28 +115,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/ttd_hs"
+        app:layout_constraintTop_toBottomOf="@+id/ttd_header"
         app:layout_constraintVertical_bias="0.0" />
-
-    <!--@todo: create menu button here-->
-
-    <!--<androidx.appcompat.widget.ActionMenuView
-        android:id="@+id/more_menu_item"
-        android:layout_width="@dimen/_30sdp"
-        android:layout_height="0dp"
-        android:background="@drawable/more"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/h6per"
-        app:layout_constraintTop_toBottomOf="@id/h1per">
-        <com.google.android.material.navigation.NavigationView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            app:menu="@menu/dotted_more_menu"
-            app:backgroundTint="@android:color/transparent"
-            app:itemIconTint="@color/white"
-            app:itemTextColor="#FFFFFF"
-            app:labelVisibilityMode="labeled"/>
-    </androidx.appcompat.widget.ActionMenuView>-->
 
     <View
         android:id="@+id/view3"
@@ -145,6 +126,10 @@
         app:layout_constraintBottom_toTopOf="@+id/h10per"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="@+id/h1per" />
+
+    <!-- @todo:
+        1. remove shadow in bottomnav
+        2. remove 3d effect from fab-->
 
     <androidx.coordinatorlayout.widget.CoordinatorLayout
         android:id="@+id/coordinator"
@@ -166,7 +151,6 @@
             app:backgroundTint="@color/text_home"
             app:fabCradleMargin="@dimen/_5sdp"
             app:layout_anchorGravity="center_horizontal|center_vertical">
-
             <com.google.android.material.bottomnavigation.BottomNavigationView
                 android:id="@+id/bottomNavView"
                 android:layout_width="match_parent"
@@ -230,6 +214,8 @@
         app:layout_constraintEnd_toStartOf="@+id/v80per"
         app:layout_constraintStart_toStartOf="@+id/v20per"
         app:layout_constraintTop_toTopOf="@+id/h6per" />
+
+    <!-- @todo: create button view -->
     <TextView
         android:id="@+id/ttd_header"
         android:layout_width="0dp"

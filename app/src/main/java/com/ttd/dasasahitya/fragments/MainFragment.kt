@@ -60,6 +60,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 }
 
                 R.id.more -> {
+                    // @todo: create glass-like background
                     MaterialAlertDialogBuilder(activity as MainActivity)
                         .setView(R.layout.alert_more)
                         .setBackground(ColorDrawable(Color.TRANSPARENT))
