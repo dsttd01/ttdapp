@@ -10,5 +10,5 @@ Welcome to the wiki for the app being created specially for TTD DSP.
 ![Nitya karma](README images/Nitya karma.png)
 ![Naimittika karma](README images/Naimittika karma.png)
 
-## Todo:
-1. make the buttons from home screen and others look uniform
+## Current commit changes:
+1. inserted link to the youtube channel of Vid. Anandateerthachar Pagadala

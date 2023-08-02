@@ -4,6 +4,7 @@ import android.content.Intent
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.graphics.drawable.Drawable
+import android.net.Uri
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
@@ -52,7 +53,8 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 }
 
                 R.id.pravachana -> {
-                    false
+                    openUrlInBrowser("https://www.youtube.com/@anandateerthacharyapagadal2897")
+                    true
                 }
 
                 R.id.dasarapada -> {
@@ -75,6 +77,13 @@ class MainFragment : Fragment(R.layout.fragment_main) {
         }
 
         return binding.root
+    }
+
+    private fun openUrlInBrowser(url: String) {
+        // Here, you can open the URL in a browser or handle it with an appropriate action.
+        // For simplicity, we'll open it in a web browser using an implicit intent.
+        val intent = Intent(Intent.ACTION_VIEW, Uri.parse(url))
+        startActivity(intent)
     }
 
     private val runnable = Runnable {
