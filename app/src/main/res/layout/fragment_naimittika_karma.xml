@@ -80,11 +80,11 @@
 
         <com.google.android.material.floatingactionbutton.FloatingActionButton
             android:id="@+id/fab"
-            android:layout_width="@dimen/_50sdp"
-            android:layout_height="@dimen/_50sdp"
+            android:layout_width="@dimen/_45sdp"
+            android:layout_height="@dimen/_45sdp"
             app:backgroundTint="@color/text_home"
             app:borderWidth="@dimen/_8sdp"
-            app:fabCustomSize="@dimen/_50sdp"
+            app:fabCustomSize="@dimen/_45sdp"
             app:layout_anchor="@id/bottomAppBar"
             app:srcCompat="@drawable/ic_home"
             app:tint="@android:color/white" />
