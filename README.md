@@ -11,4 +11,5 @@ Welcome to the wiki for the app being created specially for TTD DSP.
 ![Naimittika karma](README images/Naimittika karma.png)
 
 ## Current commit changes:
-1. inserted link to the youtube channel of Vid. Anandateerthachar Pagadala
+1. created dasarapada view
+2. dasarapada page has a single toggle button fetching one audio file for now

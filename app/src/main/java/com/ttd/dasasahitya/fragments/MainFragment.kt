@@ -58,7 +58,9 @@ class MainFragment : Fragment(R.layout.fragment_main) {
                 }
 
                 R.id.dasarapada -> {
-                    false
+                    (activity as MainActivity).supportFragmentManager.beginTransaction()
+                        .replace(R.id.fragment, DasarapadaFragment()).addToBackStack(null).commit()
+                    true
                 }
 
                 R.id.more -> {
