@@ -42,7 +42,6 @@ class AcharyaVaniService : Service() {
                 imageUrls.add(url.toString())
             }
             CoroutineScope(Dispatchers.Main).launch {
-
                 mediaPlayer.setDataSource(imageUrls[Random.nextInt(0,imageUrls.size-1)])
                 mediaPlayer.prepare()
             }
