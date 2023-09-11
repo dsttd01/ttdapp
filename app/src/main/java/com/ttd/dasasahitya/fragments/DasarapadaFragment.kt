@@ -77,7 +77,7 @@ class DasarapadaFragment : Fragment() {
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
         fetchAudioFileFromFirebase()
-        binding.dasarapadaSwitch.setOnCheckedChangeListener{_,isChecked->
+        /*binding.dasarapadaSwitch.setOnCheckedChangeListener{_,isChecked->
             if (isChecked) {
                 // The switch is checked (ON), start playing the audio
                 startAudio()
@@ -85,7 +85,7 @@ class DasarapadaFragment : Fragment() {
                 // The switch is unchecked (OFF), pause the audio
                 pauseAudio()
             }
-        }
+        }*/
     }
 
     private fun pauseAudio() {

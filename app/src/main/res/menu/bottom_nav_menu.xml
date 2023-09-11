@@ -3,12 +3,12 @@
     <item
         android:id="@+id/calender"
         android:icon="@drawable/calander"
-        android:title="Calender" />
+        android:title="@string/calender" />
 
     <item
         android:id="@+id/pravachana"
         android:icon="@drawable/youtube"
-        android:title="Pravachana" />
+        android:title="@string/pravachana" />
 
     <item
         android:id="@+id/placeholder"
@@ -17,30 +17,10 @@
     <item
         android:id="@+id/dasarapada"
         android:icon="@drawable/dasarapada"
-        android:title="Dasarapada" />
+        android:title="@string/dasara_pada" />
 
     <item
         android:id="@+id/more"
         android:icon="@drawable/more"
-        android:title="@string/more"
-        >
-        <!--@note:bottom navigation menu cannot have sub menus-->
-        <!--<menu>
-            <item android:id="@+id/profile"
-                android:icon="@drawable/profile_24"
-                android:title="@string/profile" />
-            <item android:id="@+id/events"
-                android:icon="@drawable/event_note_24"
-                android:title="@string/events" />
-            <item android:id="@+id/gallery"
-                android:icon="@drawable/photo_library_24"
-                android:title="@string/gallery" />
-            <item android:id="@+id/website"
-                android:icon="@drawable/launch_24"
-                android:title="@string/website" />
-            <item android:id="@+id/about"
-                android:icon="@drawable/baseline_info_24"
-                android:title="@string/About" />
-        </menu>-->
-    </item>
+        android:title="@string/more" />
 </menu>

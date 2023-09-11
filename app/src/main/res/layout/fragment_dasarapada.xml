@@ -50,7 +50,7 @@
         app:layout_constraintStart_toStartOf="@+id/dasarapada_header"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--<ScrollView
+    <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:layout_margin="@dimen/_5sdp"
@@ -68,17 +68,18 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/h10per">
 
-            &lt;!&ndash; Add your UI components here to display audio file information &ndash;&gt;
+            <!-- Add your UI components here to display audio file information -->
             <TextView
                 android:id="@+id/tvAudioFileName"
+                android:fontFamily="@font/poppins"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Audio File Name" />
+                android:text="@string/audio_file_name" />
 
         </LinearLayout>
-    </ScrollView>-->
+    </ScrollView>
 
-    <Button
+    <!--<Button
         android:id="@+id/dasarapada_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -97,7 +98,7 @@
         android:layout_height="wrap_content"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/dasarapada_btn" />
+        app:layout_constraintTop_toBottomOf="@+id/dasarapada_btn" />-->
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>
