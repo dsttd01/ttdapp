@@ -2,6 +2,7 @@ package com.ttd.dasasahitya.fragments
 
 import android.media.MediaPlayer
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -10,16 +11,11 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.google.firebase.storage.FirebaseStorage
 import com.google.firebase.storage.StorageReference
+import com.ttd.dasasahitya.GetSongs
 import com.ttd.dasasahitya.MainActivity
 import com.ttd.dasasahitya.R
-// import com.ttd.dasasahitya.adapters.AudioFileAdapter
-import com.ttd.dasasahitya.databinding.FragmentCalendarBinding
+import com.ttd.dasasahitya.adapters.AudioFileAdapter
 import com.ttd.dasasahitya.databinding.FragmentDasarapadaBinding
-
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
-private const val ARG_PARAM1 = "param1"
-private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
@@ -27,20 +23,9 @@ private const val ARG_PARAM2 = "param2"
  * create an instance of this fragment.
  */
 class DasarapadaFragment : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
     private lateinit var binding: FragmentDasarapadaBinding
     private lateinit var mediaPlayer: MediaPlayer
-
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-
-    }
+    private lateinit var recyclerView: RecyclerView
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -51,32 +36,19 @@ class DasarapadaFragment : Fragment() {
         return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment DasarapadaFragment.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            DasarapadaFragment().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
-            }
-    }
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        recyclerView = binding.DSPRecyclerView
+
+        val audioFiles: List<GetSongs> = retrieveFilesFromFirebase()
+        recyclerView.adapter = AudioFileAdapter(audioFiles)
+        recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
+        
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
-        fetchAudioFileFromFirebase()
+
+        // fetchAudioFileFromFirebase()
         /*binding.dasarapadaSwitch.setOnCheckedChangeListener{_,isChecked->
             if (isChecked) {
                 // The switch is checked (ON), start playing the audio
@@ -86,6 +58,37 @@ class DasarapadaFragment : Fragment() {
                 pauseAudio()
             }
         }*/
+    }
+
+    private fun retrieveFilesFromFirebase(): List<GetSongs> {
+
+        // An empty list to hold the file names
+        val audioFileModelList = mutableListOf<GetSongs>()
+        val audioFileList = mutableListOf<String>()
+
+        // Get a reference to the Firebase Storage instance
+        val storage: FirebaseStorage = FirebaseStorage.getInstance()
+
+        // Get a reference to the Firebase Storage location where the files are stored
+        val storageRef: StorageReference =
+            storage.reference.child("DaasarapadagaluAudio")
+
+        // List all the files in the Firebase Storage location
+        storageRef.listAll()
+            .addOnSuccessListener { result ->
+                // Add the names of the files to the list
+                for (item in result.items){
+                    Log.d("File:", item.name)
+                    audioFileList.add(item.name)
+                    audioFileModelList.add(GetSongs(item.name))
+            }
+        }
+        .addOnFailureListener { exception ->
+            // Handle any errors that may occur
+            Log.e("Storage", "Error listing files", exception)
+        }
+
+        return audioFileModelList
     }
 
     private fun pauseAudio() {
@@ -111,15 +114,10 @@ class DasarapadaFragment : Fragment() {
         // For simplicity, we'll use MediaPlayer to play the audio in this example.
         mediaPlayer = MediaPlayer()
 
-        // Replace "audio/file_name.mp3" with the path to your audio file in Firebase Storage
-        val audioFolderReference: StorageReference = storageRef.child("DaasarapadagaluAudio/DasaSahithyam_01 NODIDE VENKATARAMANANA_02  JAYAGALU AAGALI.mp3")
-
-        /*audioFolderReference.listAll()
-            .addOnSuccessListener { listResult ->
-                for (item in listResult.items) {
-
-                }
-            }*/
+        val audioFolderReference: StorageReference =
+            storageRef.child("DaasarapadagaluAudio/" +
+                    "DasaSahithyam_01 NODIDE VENKATARAMANANA_02  " +
+                    "JAYAGALU AAGALI.mp3")
 
         audioFolderReference.downloadUrl.addOnSuccessListener { uri ->
             // Here, you have the download URL of the audio file.

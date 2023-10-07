@@ -2,6 +2,7 @@ package com.ttd.dasasahitya
 
 import android.app.Application
 import android.content.Context
+import com.google.firebase.FirebaseApp
 
 class DasaSahityaApp:Application() {
     init {
@@ -19,6 +20,7 @@ class DasaSahityaApp:Application() {
 
     override fun onCreate() {
         super.onCreate()
+        FirebaseApp.initializeApp(this)
         DasaSahityaApp.applicationContext = applicationContext()
     }
 }

@@ -175,7 +175,7 @@ class MainFragment : Fragment(R.layout.fragment_main) {
             override fun onPageSelected(position: Int) {
                 super.onPageSelected(position)
                 handler.removeCallbacks(runnable)
-                handler.postDelayed(runnable, 2000)
+                handler.postDelayed(runnable, 3000)
             }
         })
         binding.uvIvPlay.setOnClickListener {
