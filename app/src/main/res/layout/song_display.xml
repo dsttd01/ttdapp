@@ -9,10 +9,10 @@
     android:layout_height="wrap_content"
     android:padding="@dimen/_6sdp">
 
-    <ImageView
+    <!--<ImageView
         android:layout_width="@dimen/_18sdp"
         android:layout_height="@dimen/_18sdp"
-        android:src="@mipmap/ttd_dsp_logo_round" />
+        android:src="@mipmap/ttd_dsp_logo_round" />-->
 
     <TextView
         android:id="@+id/songNameTextView"

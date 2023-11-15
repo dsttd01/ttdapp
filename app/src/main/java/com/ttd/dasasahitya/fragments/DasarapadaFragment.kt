@@ -26,22 +26,35 @@ class DasarapadaFragment : Fragment() {
     private lateinit var binding: FragmentDasarapadaBinding
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var recyclerView: RecyclerView
+    private lateinit var adapter: AudioFileAdapter
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
+    ): View? {
         // Inflate the layout for this fragment
         binding = FragmentDasarapadaBinding.inflate(inflater, container, false)
+
+        // Initialize RecyclerView and set layout manager
+        recyclerView = binding.DSPRecyclerView
+        recyclerView.layoutManager = LinearLayoutManager(requireContext())
+
+        val audioFiles: List<String> = retrieveFilesFromFirebase()
+
+        // Initialize your adapter and set it to the RecyclerView
+        adapter = AudioFileAdapter(audioFiles)
+        recyclerView.adapter = adapter
+
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        recyclerView = binding.DSPRecyclerView
-
-        val audioFiles: List<GetSongs> = retrieveFilesFromFirebase()
-        recyclerView.adapter = AudioFileAdapter(audioFiles)
+        /*recyclerView = binding.DSPRecyclerView
         recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
+
+        val audioFiles: List<String> = retrieveFilesFromFirebase()
+        adapter = AudioFileAdapter(audioFiles)
+        recyclerView.adapter = adapter*/
         
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
@@ -60,7 +73,7 @@ class DasarapadaFragment : Fragment() {
         }*/
     }
 
-    private fun retrieveFilesFromFirebase(): List<GetSongs> {
+    private fun retrieveFilesFromFirebase(): List<String> {
 
         // An empty list to hold the file names
         val audioFileModelList = mutableListOf<GetSongs>()
@@ -78,7 +91,7 @@ class DasarapadaFragment : Fragment() {
             .addOnSuccessListener { result ->
                 // Add the names of the files to the list
                 for (item in result.items){
-                    Log.d("File:", item.name)
+                    Log.d("File", item.name)
                     audioFileList.add(item.name)
                     audioFileModelList.add(GetSongs(item.name))
             }
@@ -88,7 +101,7 @@ class DasarapadaFragment : Fragment() {
             Log.e("Storage", "Error listing files", exception)
         }
 
-        return audioFileModelList
+        return audioFileList
     }
 
     private fun pauseAudio() {
