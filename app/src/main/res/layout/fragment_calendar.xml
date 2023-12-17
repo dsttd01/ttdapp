@@ -6,6 +6,7 @@
     android:id="@+id/frameLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background_home"
     tools:context=".fragments.CalendarFragment">
 
     <androidx.constraintlayout.widget.Guideline
@@ -36,12 +37,11 @@
         android:id="@+id/textView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
         android:text="@string/date"
         android:textColor="@color/text_home"
         android:textSize="@dimen/_10sdp"
         app:fontFamily="@font/poppins"
-        app:layout_constraintStart_toStartOf="@+id/backButton"
+        app:layout_constraintStart_toEndOf="@+id/backButton"
         app:layout_constraintTop_toBottomOf="@+id/calendarView" />
 
     <TextView
@@ -52,7 +52,7 @@
         android:textColor="@color/text_home"
         android:textSize="@dimen/_15sdp"
         app:fontFamily="@font/poppins"
-        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/textView"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <TextView
@@ -63,7 +63,7 @@
         android:textColor="@color/text_home"
         android:textSize="@dimen/_10sdp"
         app:fontFamily="@font/poppins"
-        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/textView2"
         app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
     <TextView
@@ -74,7 +74,7 @@
         android:textColor="@color/text_home"
         android:textSize="@dimen/_15sdp"
         app:fontFamily="@font/poppins"
-        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/textView3"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView

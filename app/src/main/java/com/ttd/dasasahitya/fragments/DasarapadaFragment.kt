@@ -22,7 +22,7 @@ import com.ttd.dasasahitya.databinding.FragmentDasarapadaBinding
  * Use the [DasarapadaFragment.newInstance] factory method to
  * create an instance of this fragment.
  */
-class DasarapadaFragment : Fragment() {
+class DasarapadaFragment : Fragment(R.layout.fragment_dasarapada) {
     private lateinit var binding: FragmentDasarapadaBinding
     private lateinit var mediaPlayer: MediaPlayer
     private lateinit var recyclerView: RecyclerView
@@ -31,7 +31,7 @@ class DasarapadaFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
+    ): View {
         // Inflate the layout for this fragment
         binding = FragmentDasarapadaBinding.inflate(inflater, container, false)
 
@@ -49,28 +49,10 @@ class DasarapadaFragment : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        /*recyclerView = binding.DSPRecyclerView
-        recyclerView.layoutManager = LinearLayoutManager(recyclerView.context)
-
-        val audioFiles: List<String> = retrieveFilesFromFirebase()
-        adapter = AudioFileAdapter(audioFiles)
-        recyclerView.adapter = adapter*/
-        
         binding.backButton.setOnClickListener {
             (activity as MainActivity).supportFragmentManager.beginTransaction()
                 .replace(R.id.fragment, MainFragment()).addToBackStack(null).commit()
         }
-
-        // fetchAudioFileFromFirebase()
-        /*binding.dasarapadaSwitch.setOnCheckedChangeListener{_,isChecked->
-            if (isChecked) {
-                // The switch is checked (ON), start playing the audio
-                startAudio()
-            } else {
-                // The switch is unchecked (OFF), pause the audio
-                pauseAudio()
-            }
-        }*/
     }
 
     private fun retrieveFilesFromFirebase(): List<String> {
@@ -119,27 +101,5 @@ class DasarapadaFragment : Fragment() {
     override fun onDestroy() {
         super.onDestroy()
         mediaPlayer.release() // Release MediaPlayer resources when the activity is destroyed
-    }
-
-    private fun fetchAudioFileFromFirebase() {
-        val storage = FirebaseStorage.getInstance()
-        val storageRef: StorageReference = storage.reference
-        // For simplicity, we'll use MediaPlayer to play the audio in this example.
-        mediaPlayer = MediaPlayer()
-
-        val audioFolderReference: StorageReference =
-            storageRef.child("DaasarapadagaluAudio/" +
-                    "DasaSahithyam_01 NODIDE VENKATARAMANANA_02  " +
-                    "JAYAGALU AAGALI.mp3")
-
-        audioFolderReference.downloadUrl.addOnSuccessListener { uri ->
-            // Here, you have the download URL of the audio file.
-            // You can now use this URL to play the audio using MediaPlayer or any other library of your choice.
-            mediaPlayer.setDataSource(uri.toString())
-            mediaPlayer.prepare()
-        }.addOnFailureListener {
-            // Handle any error that occurs while fetching the audio file.
-            // For example, show a Toast message or log the error.
-        }
     }
 }
